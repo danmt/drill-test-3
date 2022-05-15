@@ -18,6 +18,8 @@ jobs:
         run: echo "The result was ${{ steps.vault-updater.result }}"
   board_cleaner_job:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     name: A job to clean all claimed bounties.
     steps:
       - name: Board Cleaner
