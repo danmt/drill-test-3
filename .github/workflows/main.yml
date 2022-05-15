@@ -12,7 +12,6 @@ jobs:
           token: ${{secrets.GITHUB_TOKEN}}
           rpc-endpoint: ${{ secrets.RPC_ENDPOINT }}
           program-id: ${{ secrets.PROGRAM_ID }}
-          drill-bot-id: ${{ secrets.DRILL_BOT_ID }}
           github-repository: ${{ github.repository }}
           cluster: ${{ secrets.CLUSTER }}
       - name: Get Result
