@@ -16,9 +16,13 @@ jobs:
           cluster: ${{ secrets.CLUSTER }}
       - name: Get Vault Updater Result
         run: echo "The result was ${{ steps.vault-updater.result }}"
+  board_cleaner_job:
+    runs-on: ubuntu-latest
+    name: A job to clean all claimed bounties.
+    steps:
       - name: Board Cleaner
         id: board-cleaner
-        uses: heavy-duty/drill-board-cleaner-action@v1.0.0
+        uses: heavy-duty/drill-board-cleaner-action@v1.0.1
         with:
           token: ${{secrets.GITHUB_TOKEN}}
           rpc-endpoint: ${{ secrets.RPC_ENDPOINT }}
