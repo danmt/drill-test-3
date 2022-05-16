@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: Board Cleaner
         id: board-cleaner
-        uses: heavy-duty/drill-board-cleaner-action@v1.0.2
+        uses: heavy-duty/drill-board-cleaner-action@v1.0.3
         with:
           token: ${{secrets.GITHUB_TOKEN}}
           rpc-endpoint: ${{ secrets.RPC_ENDPOINT }}
